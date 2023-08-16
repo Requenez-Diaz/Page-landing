@@ -1,18 +1,21 @@
 import "./App.css";
-<<<<<<< HEAD
-import Nav from "./components/Nabvar/Nav";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav";
+import Home from "./pages/Home";
+import About from "./pages/About";
 function App() {
   return (
-    <div className='App'>
+    <BrowserRouter>
       <Nav />
-    </div>
+      <div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
-=======
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-function App() {
-  return <h1 className='p'>Hola mundo</h1>;
->>>>>>> 61a5f67 (adding new components)
 }
 
 export default App;
